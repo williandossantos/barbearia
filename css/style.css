@@ -1,0 +1,572 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+html, body{
+    background-color: #f2f2f2;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*============CABEÇALHO=============*/
+header{padding: 15px 2%;}
+header > .container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+.container > .brand-top a{
+    font-size: 22px;
+    font-weight: bold;
+    color:  #571904;
+}
+.container > .brand-top a:hover{
+    color:  #a18980;
+}
+.container > .menu a{
+    padding: 10px 15px;
+    display: inline-block;
+    margin-right: 20px;
+    color: #a18980;
+    font-weight: bold;
+}
+.container > .menu a:last-child{
+    margin-right: 0;
+}
+.container > .menu a:hover{
+    color: #571904;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px #f9f9f9;
+    border-radius:5px ;
+    transition: 0.7s;
+}
+/*===========HOME============*/
+.home{
+    border-radius: 40px;
+    position: fixed;
+    background-image: url("../img/arrow.png");
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-90deg);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    bottom: 0;
+    right:0;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+}
+/*============BG-TOP=============*/
+section.bg-top{
+    background-image: url("../img/bg02.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.bg-top .bg-top-container{
+    width: 100%;
+    min-height: 500px;
+    background-color:rgba(0,0,0,.8);
+    padding: 0 3%;
+}
+.bg-top-container .chamada-texto-top{
+    max-width: 600px;
+    color: white;
+    padding-top: 120px;
+}
+
+.chamada-texto-top h2{
+    position: relative;
+    font-size: 37px;
+    color: #FF8053;
+}
+.chamada-texto-top h2::before{
+    content: "";
+    position: absolute;
+    width: 105px;
+    height:2px;
+    background-color: #FF8053;
+    top: -5px;
+    left: 2px;
+}
+.chamada-texto-top p{
+    padding: 15px 0;
+    font-size: 20px;
+    color: #e8edee;
+}
+.chamada-texto-top .btn-top .saiba-mais{
+    width: 145px;
+    height: 48px;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #FF8053;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.chamada-texto-top .btn-top .saiba-mais:hover{
+    color: black;
+    background-color:#FF8053;
+    border: 2px solid #FF8053;
+    box-shadow: 0 0 20px #fd8a60; 
+}
+/*============PROFESSOR===========*/
+
+.professor {
+    padding:15px 2%;
+    background-color: rgb(250, 245, 239);
+}
+.professor > div >  h2{
+    position: relative;
+    font-size: 22px;
+    color: saddlebrown;
+    padding-bottom: 10px;
+}
+.professor > div >  h2::after{
+    content: "";
+    position: absolute;
+    width: 95px;
+    height:2px;
+    background-color: saddlebrown;
+    top: 30px;
+    left: 2px;
+}
+.professor .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 0;
+}
+.container > .img-wrap-prof{
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.container > .img-wrap-prof img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+.container > .perfil{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.container > .perfil h2{
+    color: saddlebrown;
+    padding: 15px 0;
+    font-size: 25px;
+}
+.container > .perfil p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*============ESTILOS=============*/
+.estilo-corte{
+    padding: 15px 2%;
+    background: rgb(255, 255, 255);
+}
+.estilo-corte > div >  h2{
+    position: relative;
+    font-size: 22px;
+    color: saddlebrown;
+    padding-bottom: 10px;
+}
+.estilo-corte > div >  h2::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height:2px;
+    background-color: saddlebrown;
+    top: 30px;
+    left: 2px;
+}
+.estilo-corte .container{
+    padding: 60px 0;
+}
+.estilo-corte .corte-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px,auto));
+    justify-content: center;
+    gap: 20px;
+}
+.corte-wrapper .corte{
+    max-width: 220px;
+    border-radius: 10px;
+    margin: 0  auto;
+    font-family: 'Poppins', sans-serif;
+}
+.corte-wrapper .corte img{
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(184, 192, 197);
+}
+.corte-wrapper .corte h3{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+}
+.corte-wrapper .corte p{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/*============FEITO POR ALUNOS=============*/
+.alunos{
+    padding: 15px 2%;
+    background-color: rgb(250, 245, 239);
+}
+.alunos > div >  h2{
+    position: relative;
+    font-size: 22px;
+    color: saddlebrown;
+    padding-bottom: 10px;
+}
+.alunos > div >  h2::after{
+    content: "";
+    position: absolute;
+    width: 158px;
+    height:2px;
+    background-color: saddlebrown;
+    top: 30px;
+    left: 2px;
+}
+.alunos .container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, auto));
+    gap: 25px;
+    padding: 60px 0;
+}
+.container .aluno-corte{
+    max-width: 300px;
+    border:1px solid #c3c3c3;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+.container .aluno-corte .aluno-img-wrapper{
+    width:96px;
+    height: 96px;
+    border-radius: 50px;
+    background-color: rgb(75, 56, 42);
+    margin: 0 auto;
+}
+.aluno-corte .aluno-img-wrapper .img{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/aluno.png");
+    background-position: 50% -10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.aluno-corte .aluno-texto{
+    text-align: center;
+    margin-top: 15px;
+}
+.aluno-corte .aluno-texto h3{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    border-top: 1px solid rgb(75, 56, 42);
+}
+.container .video-corte{
+    width: 100%;
+    max-width: 490px;
+    margin: 0 auto;
+}
+.container .video-corte video{
+    width: 100%;
+    height: 100%;
+}
+/*============CURSO=============*/
+.curso {
+    padding: 15px 2%;
+    background-color: white;
+}
+.curso > div >  h2{
+    position: relative;
+    font-size: 22px;
+    color: saddlebrown;
+    padding-bottom: 10px;
+}
+.curso > div >  h2::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height:2px;
+    background-color: saddlebrown;
+    top: 30px;
+    left: 2px;
+}
+.curso .container{
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,auto));
+    justify-content: center;
+    gap: 40px;
+}
+.container .curso-wrapper {
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #b6b6b6;
+    padding-bottom: 10px;
+}
+.container .curso-wrapper .img-wrapper{
+    width: 100%;
+    background-color: rgba(121, 90, 68, 0.192);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    padding: 30px 0;
+}
+.container .curso-wrapper .img-wrapper img{
+    width: 100px;
+    background-position: 50px;
+}
+.container .curso-texto{
+    text-align: center;
+    padding: 0 6%;
+}
+.container .curso-texto h2{
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+    margin-bottom: 20px; 
+}
+.container .curso-texto p{
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: rgb(77, 64, 55);
+}
+.container .curso-btn{
+    text-align: center;
+    padding: 10px 0;
+}
+.container .curso-btn button{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(121, 90, 68);
+    border:0;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 47px;
+    line-height: 44px;
+    outline: none;
+    width: 150px;
+}
+.container .curso-btn button:hover{
+    background-color: rgb(75, 56, 42);
+    box-shadow: 0 0 10px rgb(75, 56, 42);
+    border:0;
+    outline: none;
+    transition: 0.7s;
+}
+/*============CURSO=============*/
+.depoimentos {
+    padding: 15px 2%;
+    background-color: rgb(250, 245, 239);
+}
+.depoimentos > div >  h2{
+    position: relative;
+    font-size: 22px;
+    color: saddlebrown;
+    padding-bottom: 10px;
+}
+.depoimentos > div >  h2::after{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height:2px;
+    background-color: saddlebrown;
+    top: 30px;
+    left: 2px;
+}
+.depoimentos .container{
+    max-width: 900px;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 40px;
+}
+.depoimentos .depo-wrapper{
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid rgb(75, 56, 42);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    gap:10px;
+}
+.depoimentos .depo-wrapper .img-wrapper{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: rgb(121, 90, 68);
+    align-self: center;
+    margin: 0 auto;
+}
+.depoimentos .depo-wrapper .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 70px;
+}
+.depoimentos .depo-texto{
+    width: 180px;
+}
+.depoimentos .depo-texto p{
+    text-decoration-line: underline;
+    font-size: 15px;
+}
+
+/*============SOBRE===========*/
+.sobre{
+    background-image: url("../img/bg-sobre.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sobre .container{
+    padding: 60px 2%;
+    background-color: rgba(0,0,0,.6);
+    max-width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+.sobre .container .sobre-texto{
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+    
+}
+.sobre .container .sobre-texto h2{
+    color: #FF8053;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.sobre .container .sobre-texto p{
+    font-family: "poppins";
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+}
+.sobre-texto p::after{
+    content: "";
+    background-color: #FF8053;
+    position: absolute;
+    top:0;
+    left: 40%;
+    width: 20%;
+    height: 2px;
+}
+
+/*============CONTATO===========*/
+.formulario{
+    padding: 60px 2%;
+}
+.formulario form{
+    max-width: 420px;
+    margin: 0 auto;
+}
+form .form-wrap{
+    margin-bottom: 12px;
+}
+form .form-wrap textarea,
+form .form-wrap input{
+    width: 100%;
+    padding: 9px 12px;
+    outline: none;
+    border: 1px solid rgba(75, 56, 42, 0.651);
+    border-radius: 7px;
+    color: rgb(75, 56, 42);
+    font-family: 'Poppins', sans-serif;
+}
+form .form-wrap textarea{
+    resize: 0;
+    height: 170px;
+}
+/*============FOOTER===========*/
+footer{
+    background-color: white;
+    
+}
+footer .container{
+    padding: 100px 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap:30px;
+}
+footer .container .left,
+footer .container .center,
+footer .container .right{
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+footer .container p,
+footer .container h2{
+    margin-bottom: 10px;
+    color: rgb(75, 56, 42);
+}
+footer .container  p img{
+    width: 35px;
+    height: 35px;
+}
+footer >p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(31, 23, 17);
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*============MEDIA SCREEN===========*/
+@media screen and (max-width:540px) {
+
+    /*===========HEADER===========*/
+    header{
+        padding:15px 0 0 0;
+    }
+    header .container{
+        grid-template-columns:1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    header .container nav{
+        width: 100%;
+        background-color: #2c201c;
+        padding: 5px 0;
+    }
+}
